@@ -86,7 +86,7 @@ export default function Client({
         <div className="mb-8">
           <h1 className="text-2xl font-semibold tracking-tight">Team</h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            You are not a member of any team yet.
+            You have not joined a CoreSphere team workspace yet.
           </p>
         </div>
         <Card>
@@ -96,7 +96,7 @@ export default function Client({
             </div>
             <p className="mt-4 text-sm font-medium">No team found</p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Sign up for a new account to automatically create your team.
+              Sign up or accept an invite to create or join a CoreSphere workspace.
             </p>
           </CardContent>
         </Card>
@@ -113,7 +113,7 @@ export default function Client({
       <div className="mb-8">
         <h1 className="text-2xl font-semibold tracking-tight">Team</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Manage members, roles, and invitations for{" "}
+          Manage members, workspace settings, and invitations for{" "}
           <span className="font-medium text-foreground">{team?.name}</span>.
         </p>
       </div>
@@ -138,7 +138,7 @@ export default function Client({
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-2">
                   <Pencil className="size-4 text-muted-foreground" />
-                  <CardTitle className="text-base">Team Settings</CardTitle>
+                  <CardTitle className="text-base">Workspace Name</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -147,7 +147,7 @@ export default function Client({
                   className="flex items-end gap-3"
                 >
                   <div className="flex-1 space-y-2">
-                    <Label htmlFor="teamName">Team name</Label>
+                    <Label htmlFor="teamName">Workspace name</Label>
                     <Input
                       id="teamName"
                       name="name"
@@ -344,7 +344,7 @@ export default function Client({
                 <CardTitle className="text-base">Invite Member</CardTitle>
               </div>
               <CardDescription>
-                Send an email invitation to add a new team member.
+                Invite your team—CRM is best together! Members get an email invite to the workspace.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -371,8 +371,7 @@ export default function Client({
                     <option value="admin">Admin</option>
                   </select>
                   <p className="text-xs text-muted-foreground">
-                    Admins can invite and manage members. Members have
-                    standard access.
+                    Admins manage team roles. Members use all CRM features.
                   </p>
                 </div>
                 <Separator />
